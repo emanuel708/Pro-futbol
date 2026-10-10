@@ -1,0 +1,259 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="theme-color" content="#0b1020"><title>Pro Football Star V17</title><style>
+:root{--a:#a6f750;--bg:#101522;--p:#1b2231;--p2:#273247;--t:#f4f7ff;--m:#aab4c7;--g:#f5d66d;--r:#ff5d73}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}body{margin:0;background:var(--bg);color:var(--t);font:15px -apple-system,sans-serif;padding:env(safe-area-inset-top) 0 calc(80px + env(safe-area-inset-bottom))}
+button,input,select{font:inherit;font-size:16px}button{cursor:pointer;touch-action:manipulation;color:var(--t)}.app{max-width:520px;margin:auto;padding:10px}
+.top{display:flex;justify-content:space-between;align-items:center;padding:8px 4px}.card{background:var(--p);border:1px solid #2b3865;border-radius:12px;padding:13px;margin-bottom:10px}h2{margin:0 0 4px;font-size:20px}h3{margin:0 0 8px;font-size:16px}
+.sub{color:var(--m);font-size:12px}.pill{display:inline-block;background:#0d1530;border-radius:99px;padding:4px 10px;font-size:12px;margin:4px 4px 0 0;font-weight:700}
+.hero{display:flex;gap:12px;align-items:center}.av{position:relative;width:92px;height:108px;border-radius:24px;background:linear-gradient(180deg,#2a3348,#1a2235);display:grid;place-items:center;overflow:hidden;flex:none;box-shadow:0 4px 12px #0005}.av i{position:absolute;bottom:0;left:0;right:0;height:26px;font-style:normal;font-size:14px;font-weight:900;display:grid;place-items:center;color:#fff}.av b{position:absolute;top:2px;font-size:22px}
+.bar{display:flex;align-items:center;gap:8px;margin-top:8px;font-size:12px}.bar div{flex:1;height:9px;background:#0d1530;border-radius:9px;overflow:hidden}.bar i{display:block;height:100%}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.big{background:var(--p2);border:1px solid #33427a;border-radius:16px;padding:14px 4px;font-size:26px;font-weight:700}.big small{display:block;font-size:12px;margin-top:4px}
+.play{width:100%;margin:12px 0;padding:18px;border:0;border-radius:12px;font-size:19px;font-weight:900;color:#06210f;background:linear-gradient(135deg,var(--a),#35d6a1);box-shadow:0 0 24px #a6f75055;animation:pulse 2s infinite}@keyframes pulse{50%{transform:scale(1.02)}}
+.row{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:9px 0;border-bottom:1px solid #222d52}.row:last-child{border:0}.btn{background:var(--a);color:#06210f;border:0;border-radius:12px;padding:10px 14px;font-weight:800}.btn.s{background:var(--p2);color:var(--t);border:1px solid #33427a}.btn.r{background:var(--r);color:#fff}.btn:disabled{opacity:.35}
+.nav{position:fixed;bottom:0;left:0;right:0;display:flex;justify-content:space-around;background:#080d1cf2;border-top:1px solid #2b3865;padding:6px 0 calc(6px + env(safe-area-inset-bottom));z-index:5}.nav button{background:none;border:0;color:var(--m);font-size:11px;font-weight:700;display:flex;flex-direction:column;align-items:center;min-width:60px}.nav button span{font-size:24px}.nav .on{color:var(--a)}
+.ov{display:none;position:fixed;inset:0;background:#030612e6;z-index:10;align-items:flex-end;justify-content:center}.md{width:100%;max-width:520px;max-height:88dvh;overflow:auto;background:var(--bg);border:1px solid #2b3865;border-radius:24px 24px 0 0;padding:16px 14px calc(22px + env(safe-area-inset-bottom))}.md h2{display:flex;justify-content:space-between}
+.ch{display:block;width:100%;text-align:left;background:var(--p2);border:1px solid #33427a;border-radius:14px;padding:14px;margin-top:9px}.ch b{display:block}.ch small{color:var(--m)}
+.f{width:100%;padding:12px;border-radius:12px;border:1px solid #33427a;background:#0d1530;color:#fff;margin:6px 0}.post{padding:10px 0;border-bottom:1px solid #222d52}.post b{font-size:14px}.post p{margin:4px 0}
+.sw{display:inline-block;width:38px;height:38px;border-radius:50%;border:3px solid transparent;margin:3px}.sw.on{border-color:#fff}.fab{position:fixed;right:16px;bottom:calc(86px + env(safe-area-inset-bottom));z-index:6;width:56px;height:56px;border-radius:50%;border:0;background:var(--a);color:#06210f;font-size:26px;box-shadow:0 4px 18px #000a}
+.score{font-size:40px;font-weight:900;text-align:center}.full{position:fixed;inset:0;z-index:20;display:grid;place-items:center;text-align:center;overflow:hidden}.crest{width:130px;height:130px;border-radius:50%;display:grid;place-items:center;font-size:44px;font-weight:900;border:6px solid #fff;margin:0 auto 16px;animation:pop .9s cubic-bezier(.2,1.6,.4,1)}@keyframes pop{from{transform:scale(0) rotate(-200deg)}}
+.cf{position:absolute;top:-20px;font-size:22px;animation:fall 3s linear forwards}@keyframes fall{to{transform:translateY(110vh) rotate(720deg)}}.burst{position:fixed;inset:0;z-index:30;display:grid;place-items:center;font-size:56px;font-weight:900;text-align:center;background:#000a;animation:fade 1.6s forwards;pointer-events:none}@keyframes fade{70%{opacity:1}to{opacity:0}}.burst span{animation:pop .6s}
+.tg{position:fixed;left:50%;top:calc(env(safe-area-inset-top) + 10px);transform:translateX(-50%);z-index:40;background:var(--a);color:#06210f;padding:10px 16px;border-radius:14px;font-weight:800;max-width:90%;text-align:center}
+.av svg{width:100%;height:100%;filter:drop-shadow(0 6px 8px #0008)}
+.editor-section{background:linear-gradient(145deg,#1b2538,#11192b);border:1px solid #2c3a58;border-radius:15px;padding:13px}.editor-section h3{font-size:15px;margin:0 0 11px}.editor-label{display:block;color:var(--m);font-size:12px;font-weight:800;margin:10px 0 5px}.editor-swatches{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.editor-swatches .sw{width:42px;height:42px;margin:0;border:3px solid #ffffff20;flex:none}.editor-swatches .sw.on{border-color:#fff;box-shadow:0 0 0 2px #ffffff20}.editor-choices{display:flex;flex-wrap:wrap;gap:7px}.editor-choices .btn{font-size:13px;padding:9px 11px}
+</style></head><body><div class="app"><div class="top" id="top"></div><div id="v"></div></div><div id="nav" class="nav"></div><div class="ov" id="ov"><div class="md"><h2><span id="mt"></span><button class="btn s" onclick="cm()">✕</button></h2><div id="mb"></div></div></div>
+<script>
+const $=i=>document.getElementById(i),R=a=>a[Math.random()*a.length|0],rn=(a,b)=>a+Math.random()*(b-a+1)|0,cl=(n,a=0,b=100)=>Math.max(a,Math.min(b,n)),fm=n=>Math.round(n).toLocaleString("es-CO"),esc=v=>String(v).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const FM="Santiago,Mateo,Sebastián,Julián,Andrés,Nicolás,Camilo,Daniel,Felipe,Samuel,Emiliano,Tomás,Lucas,Diego,Juan,Mauricio,Brayan,Kevin,Thiago,Leandro,Joaquín,Bruno,Esteban,Iván,Hugo,Dylan,Alan".split(","),FF="Valentina,Camila,Sofía,Isabella,Mariana,Daniela,Luciana,Natalia,Gabriela,Laura,Paula,Antonella,Juliana,Carolina,Renata,Salomé,Emma,Lía,Martina,Alejandra,Sara,Mía".split(","),LN="Ríos,Gómez,Herrera,Castaño,Mejía,Vargas,Torres,Moreno,Ospina,Cardona,Rojas,Silva,Pérez,Duarte,Navarro,Quintero,Londoño,Salazar,Medina,Cortés,Ferreira,Domínguez,Ibáñez,Valencia,Arango,Beltrán,Acosta,Marín,Paz,Roldán".split(",");
+const pn=f=>({n:R(f?FF:FM),l:R(LN)}),nm=p=>p.n+" "+p.l;
+const L={"Amateur":"Club de Barrio:40,Juventud FC:38,Deportivo Sur:37,Atlético Norte:39,Unión Local:36,Real Barrio:38","Colombia":"Envigado FC:52,Independiente Medellín:63,Atlético Nacional:64,Millonarios:65,América de Cali:62,Deportivo Cali:58,Junior:61,Once Caldas:57,Santa Fe:62,Bucaramanga:55,Tolima:61,Pasto:54","Argentina":"Boca Juniors:70,River Plate:72,Racing Club:68,Estudiantes:69,Independiente:67,San Lorenzo:66,Vélez:67,Talleres:66","Brasil":"Flamengo:76,Palmeiras:77,Santos:68,Corinthians:72,São Paulo:73,Fluminense:72,Botafogo:73,Atlético Mineiro:74","México":"Club América:72,Chivas:68,Tigres:71,Monterrey:71,Cruz Azul:68,Pumas:65","MLS":"Inter Miami:70,LAFC:68,LA Galaxy:67,Seattle Sounders:66,Atlanta United:65,NYCFC:65","España":"Real Madrid:87,FC Barcelona:84,Atlético de Madrid:82,Sevilla:77,Valencia:76,Villarreal:77,Real Sociedad:79,Athletic Club:79,Real Betis:77","Inglaterra":"Manchester City:88,Liverpool:86,Arsenal:85,Manchester United:83,Chelsea:82,Tottenham:80,Newcastle:82,Aston Villa:81,West Ham:76,Brighton:77","Alemania":"Bayern Munich:87,Borussia Dortmund:81,Bayer Leverkusen:82,RB Leipzig:82,Eintracht Frankfurt:77,Stuttgart:78","Italia":"Inter de Milán:85,Juventus:83,AC Milan:82,Napoli:81,Atalanta:81,Roma:79,Lazio:78,Fiorentina:76","Francia":"PSG:86,Marseille:77,Mónaco:78,Lyon:77,Lille:76,Niza:75","Portugal":"Benfica:79,Porto:79,Sporting CP:77","Países Bajos":"PSV:79,Feyenoord:78,Ajax:76","Turquía":"Galatasaray:76,Fenerbahçe:76,Beşiktaş:73","Arabia Saudita":"Al-Hilal:81,Al-Nassr:80,Al-Ittihad:79,Al-Ahli:77","Japón":"Vissel Kobe:66,Kawasaki Frontale:65"};
+const CL={},LG={};Object.entries(L).forEach(([g,v])=>{LG[g]=[];v.split(",").forEach(x=>{let[n,o]=x.split(":");o=+o;CL[n]={o,g,sal:Math.round(800*Math.exp(.141*(o-55))/10)*10,c:"hsl("+[...n].reduce((a,c)=>a+c.charCodeAt(0),0)*37%360+",65%,45%)"};LG[g].push(n)})});
+
+const ACH=[
+  {id:"first_goal",n:"Primer gol",d:"Marca tu primer gol"},
+  {id:"hattrick",n:"Hat-trick",d:"Marca 3 goles en un partido"},
+  {id:"champ",n:"Campeón",d:"Gana un título"},
+  {id:"star",n:"Estrella",d:"Alcanza 80 OVR"},
+  {id:"rich",n:"Millonario",d:"Ten $100.000"},
+  {id:"legend",n:"Leyenda",d:"Juega 200 partidos"}
+];
+function checkAch(){
+  if(!s.ach) s.ach=[];
+  const unlocked=[];
+  if(s.gl>=1 && !s.ach.includes("first_goal")) unlocked.push("first_goal");
+  if(s.ti>=1 && !s.ach.includes("champ")) unlocked.push("champ");
+  if(ovr()>=80 && !s.ach.includes("star")) unlocked.push("star");
+  if(s.money>=100000 && !s.ach.includes("rich")) unlocked.push("rich");
+  if(s.mp>=200 && !s.ach.includes("legend")) unlocked.push("legend");
+  unlocked.forEach(id=>{
+    s.ach.push(id);
+    const a=ACH.find(x=>x.id===id);
+    if(a){news("🏆 Logro desbloqueado: "+a.n); tg("🏆 "+a.n);}
+  });
+}
+const STARS="Lionel Messi|Inter Miami|ED|88;Cristiano Ronaldo|Al-Nassr|DC|86;Kylian Mbappé|Real Madrid|DC|92;Jude Bellingham|Real Madrid|MC|90;Vinícius Júnior|Real Madrid|EI|91;Lamine Yamal|FC Barcelona|ED|89;Pedri|FC Barcelona|MC|86;Raphinha|FC Barcelona|EI|86;Luis Díaz|Bayern Munich|EI|87;James Rodríguez|Atlético Nacional|MCO|78;Erling Haaland|Manchester City|DC|93;Kevin De Bruyne|Manchester City|MCO|88;Rodri|Manchester City|MCD|90;Phil Foden|Manchester City|MCO|88;Mohamed Salah|Liverpool|ED|89;Virgil van Dijk|Liverpool|DFC|88;Bukayo Saka|Arsenal|ED|88;Martin Ødegaard|Arsenal|MCO|87;William Saliba|Arsenal|DFC|87;Harry Kane|Bayern Munich|DC|90;Jamal Musiala|Bayern Munich|MCO|88;Florian Wirtz|Bayer Leverkusen|MCO|88;Antoine Griezmann|Atlético de Madrid|DC|85;Lautaro Martínez|Inter de Milán|DC|88;Nicolò Barella|Inter de Milán|MC|86;Rafael Leão|AC Milan|EI|86;Victor Osimhen|Galatasaray|DC|86;Ousmane Dembélé|PSG|ED|87;Achraf Hakimi|PSG|LD|86;Thibaut Courtois|Real Madrid|POR|89;Alisson|Liverpool|POR|88;Marc-André ter Stegen|FC Barcelona|POR|86;Federico Valverde|Real Madrid|MC|88;Enzo Fernández|Chelsea|MC|83;Julián Álvarez|Atlético de Madrid|DC|85;Neymar|Santos|EI|82;Son Heung-min|LAFC|EI|84;Darwin Núñez|Al-Hilal|DC|80;Endrick|Real Madrid|DC|80".split(";").map(x=>{let[a,b,c,d]=x.split("|");return{n:a,l:"",c:b,pos:c,o:+d,star:1}});
+const POS=["DC","EI","ED","MCO","MC","MCD","LI","LD","DFC","POR"],KEY={DC:["sho","phy"],EI:["pac","dri"],ED:["pac","dri"],MCO:["pas","dri"],MC:["pas","def"],MCD:["def","phy"],LI:["pac","def"],LD:["pac","def"],DFC:["def","phy"],POR:["def","phy"]};
+const W={DC:[.15,.3,.08,.2,.02,.25],EI:[.25,.2,.12,.28,.03,.12],ED:[.25,.2,.12,.28,.03,.12],MCO:[.1,.2,.28,.28,.04,.1],MC:[.1,.1,.32,.18,.15,.15],MCD:[.06,.04,.2,.1,.35,.25],LI:[.25,.04,.15,.15,.25,.16],LD:[.25,.04,.15,.15,.25,.16],DFC:[.1,.02,.1,.04,.45,.29],POR:[.1,0,.1,0,.5,.3]},SN={pac:"Ritmo",sho:"Tiro",pas:"Pase",dri:"Regate",def:"Defensa",phy:"Físico"};
+const NAT="🇨🇴 Colombia,🇦🇷 Argentina,🇧🇷 Brasil,🇺🇾 Uruguay,🇨🇱 Chile,🇪🇨 Ecuador,🇲🇽 México,🇺🇸 EE.UU.,🇪🇸 España,🇫🇷 Francia,🇵🇹 Portugal,🇬🇧 Inglaterra,🇳🇱 P. Bajos,🇩🇪 Alemania,🇮🇹 Italia,🇳🇬 Nigeria,🇯🇵 Japón".split(",");
+const ITEMS=[["Consola",800,"mo",3,"🎮"],["Moto",2500,"fa",5,"🏍️"],["Nutricionista",6000,"en",8,"🥗"],["Reloj de lujo",15000,"fa",6,"⌚"],["Casa mejorada",30000,"mo",6,"🏡"],["Auto deportivo",42000,"fa",12,"🏎️"],["Vuelo privado",250000,"fa",15,"✈️"],["Mansión",320000,"fa",20,"🏰"]];
+const SP=[["Puma",48,420],["Gatorade",53,550],["Beats",50,500],["Adidas",56,800],["Nike",58,900],["Jordan",68,1500],["EA SPORTS",70,1800],["Gucci",78,2800],["Supreme",76,2600]];
+const BOOTS=[["Nike Mercurial Vapor",3200,"Nike"],["Nike Phantom GX",3500,"Nike"],["Adidas Predator",3100,"Adidas"],["Adidas F50",3300,"Adidas"],["Puma Future",2900,"Puma"],["Puma Ultra",3000,"Puma"],["Jordan Elite FG",5200,"Jordan"],["Supreme Street Boots",6100,"Supreme"]];
+const CEL=["🕺 Baile","🤫 Silencio","✈️ Avión","🙏 Rezo","🐐 GOAT"],SK=["#ffdbb4","#f1c27d","#e0ac69","#c68642","#8d5524","#5c3a21"],KIT=["#e11d48","#2563eb","#16a34a","#f59e0b","#7c3aed","#0d9488"],ACC=["Ninguno","Gorra","Banda","Gafas","Aretes"],ACN=["#a6f750","#38bdf8","#f472b6","#fbbf24","#fb7185"];
+let s=null,tab="home",mt=null;
+const ovr=()=>Math.round(Object.keys(SN).reduce((a,k,i)=>a+s.st[k]*W[s.pos][i],0)),cur=()=>CL[s.club],isDef=()=>["POR","DFC","LI","LD","MCD"].includes(s.pos);
+const save=()=>{try{localStorage.setItem("pfs14",JSON.stringify(s))}catch(e){}};
+function tg(m){let d=document.createElement("div");d.className="tg";d.textContent=m;document.body.appendChild(d);setTimeout(()=>d.remove(),2200)}
+function md(t,h){$("mt").textContent=t;$("mb").innerHTML=h;$("ov").style.display="flex"}function cm(){$("ov").style.display="none";render()}$("ov").onclick=e=>{if(e.target.id==="ov")cm()};
+function news(m){s.news.unshift("S"+s.wk+" · "+m);s.news=s.news.slice(0,12)}
+function post(who,t,k){s.feed.unshift({w:s.wk,who,t,k,lk:rn(3,40+s.fa*8),on:0});s.feed=s.feed.slice(0,40)}
+function genSq(){s.sq=Array.from({length:12},()=>({...pn(),pos:R(POS),o:cl(cur().o+rn(-7,7))}))}
+function genWorld(){s.world=[...STARS,...Array.from({length:70},()=>{let c=R(Object.keys(CL).filter(x=>CL[x].g!=="Amateur"));return{...pn(),c,pos:R(POS),o:cl(CL[c].o+rn(-4,8),50,92)}})]}
+function initTb(){s.tb={};LG[cur().g].forEach(n=>s.tb[n]={p:0,j:0,gf:0,gc:0});newOpp()}
+function newOpp(){let c=LG[cur().g].filter(x=>x!==s.club);s.opp=R(c)}
+function newGame(o){let st={pac:50,sho:50,pas:50,dri:50,def:35,phy:50};KEY[o.pos].forEach((k,i)=>st[k]+=i?8:12);
+s={v:14,n:o.n,l:o.l,pos:o.pos,nat:o.nat,age:17,club:"Club de Barrio",wk:1,se:1,money:500,en:100,mo:80,fa:10,st,trust:40,sal:CL["Club de Barrio"].sal,ctr:2,did:{},feed:[],news:[],fr:Array.from({length:4},()=>({...pn(Math.random()<.4),bond:rn(45,70),job:R(["🧑‍🔧","🧑‍🎓","🧑‍🍳","🧑‍💻","🎤","🧑‍🎨"])})),pa:null,mar:0,sq:[],fol:[],gl:0,as:0,mp:0,w:0,d:0,lo:0,sg:0,ti:0,it:[],sp:[],day:1,dd:0,dact:0,foc:null,part:0,boots:[],boot:null,eventIn:rn(3,5),eventCount:0,cu:{sk:R(SK),kit:R(KIT),ac:0,ce:0,ac2:0,hs:rn(0,6),hc:R(HC),bd:0,ey:EY[0],tt:[]},cap:pn()};
+cur();genSq();genWorld();initTb();news("Comienza tu carrera como "+o.pos+". ¡A ganarte un lugar!");post(nm(s.fr[0]),"Mi parcero "+s.n+" va a ser crack, acuérdense de este nombre 🔥","f");post("Tu familia","Siempre orgullosos de ti ❤️","k");save();render();setup2()}
+function setup(){let n=R([...FM,...FF]),l=R(LN);md("🆕 Nueva carrera",`<p class="sub">Cada partida genera amigos, compañeros y jugadores distintos.</p><input class="f" id="sn" placeholder="Nombre" value="${n}"><input class="f" id="sl" placeholder="Apellido" value="${l}"><button class="btn s" style="width:100%" onclick="$('sn').value=R([...FM,...FF]);$('sl').value=R(LN)">🎲 Nombre aleatorio</button><select class="f" id="sp">${POS.map(p=>`<option>${p}</option>`).join("")}</select><select class="f" id="snat">${NAT.map(p=>`<option>${p}</option>`).join("")}</select><button class="play" onclick="newGame({n:$('sn').value.trim()||'Jugador',l:$('sl').value.trim()||'Anónimo',pos:$('sp').value,nat:$('snat').value})">¡EMPEZAR!</button>`)}
+function setup2(){cm();md("👋 Bienvenido",`<p>Tu semana: elige <b>Entrenar</b>, <b>Descansar</b> o salir con tus amigos y luego pulsa <b>JUGAR JORNADA</b>. Sube de nivel, ficha por clubes mejores y vive la carrera.</p><button class="btn" style="width:100%" onclick="cm()">Vamos</button>`)}
+const HC=["#1b1b1b","#4a2c17","#8b5a2b","#d9b36c","#c8c8c8","#d94b3a","#3b5bdb"],EY=["#3b2a1a","#2e6f4f","#2563eb","#6b7280"],HN=["Calvo","Corto","Rizado","Afro","Largo","Mohicano","Moño"],BN=["Sin barba","Barba","Bigote","Candado"],TN=[["bi","Brazo izq."],["bd","Brazo der."],["cu","Cuello"],["mj","Lágrima"]];
+"/>`, // corto
+    `<g fill="${H}">${[30,40,50,60,70].map((x,i)=>`<circle cx="${x}" cy="${i%2?30:26}" r="9.5"/>`).join("")}<rect x="30" y="32" width="40" height="14" rx="6"/></g>`, // rizado
+    `<path d="M28 52 Q26 20 50 18 Q74 20 72 52 Q66 30 50 30 Q34 30 28 52Z" fill="${H}"/>`, // afro
+    `<path d="M30 52 Q28 18 50 16 Q72 18 70 52 Q64 32 50 32 Q36 32 30 52Z" fill="${H}"/>`, // largo
+    `<path d="M47 10 Q50 4 53 10 L54 34 H46Z" fill="${H}"/><path d="M34 44 Q36 32 48 30 V40 M66 44 Q64 32 52 30 V40" fill="${H}" opacity=".75"/>`, // mohicano
+    `<path d="M32 50 Q30 24 50 22 Q70 24 68 50 Q62 34 50 34 Q38 34 32 50Z" fill="${H}"/><circle cx="50" cy="14" r="8.5" fill="${H}"/>`, // moño
+    `<path d="M34 48 Q32 30 50 28 Q68 30 66 48 Q60 36 50 36 Q40 36 34 48Z" fill="${H}"/>`, // fade
+    `<path d="M31 49 Q29 22 50 20 Q71 22 69 49 Q63 32 50 32 Q37 32 31 49Z" fill="${H}"/>`, // ondulado
+    // dreads style
+    `<g fill="${H}">${[34,42,50,58,66].map((x,i)=>`<path d="M${x} 28 Q${x-2} 12 ${x} 8 Q${x+2} 12 ${x} 28Z"/>`).join("")}<path d="M32 50 Q30 28 50 26 Q70 28 68 50 Q62 36 50 36 Q38 36 32 50Z"/></g>`
+  ];
+
+  const beard = [
+    "",
+    `<path d="M34 60 Q36 78 50 82 Q64 78 66 60 Q60 72 50 72 Q40 72 34 60Z" fill="${H}" opacity=".9"/>`, // barba
+    `<path d="M43 66 Q50 62 57 66 Q50 69 43 66Z" fill="${H}"/>`, // bigote
+    `<path d="M45 70 Q50 66 55 70 Q55 80 50 82 Q45 80 45 70Z" fill="${H}"/>` // candado
+  ][bd] || "";
+
+  const accessory = [
+    "",
+    `<path d="M30 38 Q32 14 50 12 Q68 14 70 38Z" fill="${K}"/><rect x="48" y="34" width="32" height="6" rx="3" fill="${K}"/>`, // gorra
+    `<rect x="32" y="28" width="36" height="7" rx="3.5" fill="${K}"/>`, // banda
+    `<g fill="#111" fill-opacity=".82"><rect x="35" y="46" width="12" height="8.5" rx="3"/><rect x="53" y="46" width="12" height="8.5" rx="3"/><rect x="47" y="49" width="6" height="2"/></g>`, // gafas
+    `<circle cx="31" cy="60" r="2.6" fill="#f5d66d"/><circle cx="69" cy="60" r="2.6" fill="#f5d66d"/>` // aretes
+  ][ac % 5] || "";
+
+  const mouth = mood === 1
+    ? `<path d="M43 72 Q50 78 57 72" stroke="#7a2e2e" stroke-width="2.2" fill="none" stroke-linecap="round"/>`
+    : `<path d="M45 70 Q50 74 55 70" stroke="#7a2e2e" stroke-width="2" fill="none" stroke-linecap="round"/>`;
+
+  // Better arm tattoos
+  const armTattoos = (side) => {
+    if (!t.includes(side)) return "";
+    const x = side === "bi" ? 12 : 82;
+    return `<g transform="translate(${x},105)" stroke="#1a1a1a" stroke-width="1.4" fill="none" opacity=".75">
+      <path d="M2 0 q4 6 0 10 q-3 4 2 8"/>
+      <path d="M-1 4 q6 3 2 8"/>
+      <circle cx="3" cy="6" r="2.2"/>
+    </g>`;
+  };
+
+  return `<svg viewBox="0 0 100 140" xmlns="http://www.w3.org/2000/svg">
+    <!-- Arms (more natural) -->
+    <path d="M10 100 Q6 90 12 82 Q18 78 22 88 L18 112 Q14 118 10 112Z" fill="${S}"/>
+    <path d="M90 100 Q94 90 88 82 Q82 78 78 88 L82 112 Q86 118 90 112Z" fill="${S}"/>
+    ${armTattoos("bi")}
+    ${armTattoos("bd")}
+    <!-- Neck -->
+    <path d="M45 74 Q50 78 55 74 L56 86 Q50 90 44 86Z" fill="${S}"/>
+    ${t.includes("cu") ? `<path d="M47 82 h6 M48 86 h4" stroke="#1a1a1a" stroke-width="1.2" fill="none" opacity=".6"/>` : ""}
+    <!-- Torso / Jersey -->
+    <path d="M20 140 V102 Q20 88 36 84 L64 84 Q80 88 80 102 V140Z" fill="${K}"/>
+    <path d="M20 108 Q18 96 30 90 L30 108Z" fill="${K}" opacity=".85"/>
+    <path d="M80 108 Q82 96 70 90 L70 108Z" fill="${K}" opacity=".85"/>
+    <!-- V neck -->
+    <path d="M42 84 L50 96 L58 84Z" fill="rgba(255,255,255,.92)"/>
+    <!-- Number -->
+    <text x="50" y="124" text-anchor="middle" font-size="16" font-weight="900" fill="#fff" font-family="system-ui,sans-serif" opacity=".95">${n9}</text>
+    <!-- Head (more rounded) -->
+    <ellipse cx="50" cy="54" rx="21" ry="24" fill="${S}"/>
+    ${beard}
+    <!-- Eyes -->
+    <ellipse cx="42.5" cy="52" rx="4.8" ry="3.2" fill="#fff"/>
+    <ellipse cx="57.5" cy="52" rx="4.8" ry="3.2" fill="#fff"/>
+    <circle cx="42.5" cy="52" r="2.2" fill="${E}"/>
+    <circle cx="57.5" cy="52" r="2.2" fill="${E}"/>
+    <circle cx="43.4" cy="51.2" r="0.7" fill="#fff"/>
+    <circle cx="58.4" cy="51.2" r="0.7" fill="#fff"/>
+    <!-- Eyebrows -->
+    <path d="M37 46 Q42.5 43.5 48 46" stroke="${H}" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+    <path d="M52 46 Q57.5 43.5 63 46" stroke="${H}" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+    <!-- Nose -->
+    <path d="M49.5 60 Q50 63 50.5 60" stroke="rgba(0,0,0,.25)" stroke-width="1.3" fill="none"/>
+    ${mouth}
+    ${t.includes("mj") ? `<path d="M38 62 q-2.5 4 0 5 q2.5-.8 0-5z" fill="#3b82f6" opacity=".8"/>` : ""}
+    ${hairs[h] || ""}
+    ${accessory}
+  </svg>`;
+}
+height:${h}px">${avsvg(s.cu)}</div>`;
+const DY=["","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado"],ACTS=[0,["🧠 Charla táctica|Pizarra con el técnico|0,0,4,0|pas","📹 Video de partidos|Estudian al rival|0,-3,3,0|pas"],["🎳 Bolera del equipo|Noche de bolos|8,-5,0,0","🎮 Torneo de FIFA|Torneo en el vestuario|7,-3,1,1"],["🏊 Piscina y spa|Día de recuperación|3,15,0,0","🧘 Yoga del club|Flexibilidad y calma|4,10,0,0|phy"],["🎬 Cine con el equipo|Película y palomitas|6,5,0,0","🎤 Karaoke del club|Todos cantan|9,-4,0,1"],["🍖 Asado de equipo|Concentración con asado|8,8,2,0","⛳ Día de golf|Con el cuerpo técnico|5,3,3,0|dri"]];
+function pa(){let o=ACTS[s.day]||ACTS[1],x=o[s.dact%o.length].split("|"),f=(x[2]||"0,0,0,0").split(",").map(Number);return{n:x[0],d:x[1],f,st:x[3],l:f.map((v,i)=>v?(v>0?"+":"")+v+" "+["moral","energía","confianza","fama"][i]:"").filter(Boolean).join(" · ")}}
+function doAct(){if(s.dd||s.day>5)return;let a=pa(),f=a.f;s.mo=cl(s.mo+f[0]);s.en=cl(s.en+f[1]);s.trust=cl(s.trust+f[2]);s.fa=cl(s.fa+f[3]);s.dd=1;s.part=(s.part||0)+1;if(a.st&&Math.random()<.4){s.st[a.st]=cl(s.st[a.st]+1,0,99);tg("📈 +1 "+SN[a.st])}else tg("✅ "+a.n);news(a.n+" con el club.");s.eventIn=Math.max(0,(s.eventIn||3)-1);if(s.eventIn===0){specialEvent();s.eventIn=rn(3,5)}save();render()}
+function specialEvent(){s.eventCount=(s.eventCount||0)+1;const events=[
+()=>{s.fa=cl(s.fa+5);s.money+=500;news("📸 Entrevista exclusiva: +5 fama y $500.");tg("📸 ¡Entrevista!")},
+()=>{s.en=cl(s.en+20);let k=R(Object.keys(SN));s.st[k]=cl(s.st[k]+1,0,99);news("🏋️ Sesión extra. +1 "+SN[k]);tg("🏋️ +1 "+SN[k])},
+()=>{s.mo=cl(s.mo+12);s.trust=cl(s.trust+4);news("🤝 El técnico te da confianza.");tg("🤝 Confianza +4")},
+()=>{s.money+=1200;news("🎁 Premio por buen rendimiento: $1.200");tg("🎁 Premio")},
+()=>{if(Math.random()<.3){s.en=cl(s.en-25);news("🤕 Pequeña molestia. -25 energía");tg("🤕 Molestia")}else{s.fa=cl(s.fa+3);news("🔥 Gran entrenamiento colectivo.");tg("🔥 Buen entreno")}},
+()=>{s.fa=cl(s.fa+6);news("📱 Tu publicación se viralizó.");tg("📱 Viral")}
+];R(events)()}
+function nextDay(){if(s.day<6){s.day++;s.dd=0;s.dact=rn(0,1)}save();render()}
+function setFoc(k){s.foc=k;save();render();tg("🎯 Enfoque: "+SN[k])}
+const bar=(e,v,c)=>`<div class="bar">${e}<div><i style="width:${cl(v)}%;background:${c}"></i></div>${Math.round(v)}</div>`;
+function render(){if(!s)return;document.documentElement.style.setProperty("--a",ACN[s.cu.ac2]);$("top").innerHTML=`<div><b>${esc(s.club)}</b><div class="sub">${CL[s.club].g} · T${s.se} · Sem ${s.wk}/20</div></div><div style="text-align:right"><b style="color:var(--g)">💰 $${fm(s.money)}</b></div>`;
+$("nav").innerHTML=[["home","🏠","Inicio"],["liga","🏆","Liga"],["redes","📱","Redes"],["gente","👥","Vida"],["yo","⚽","Carrera"]].map(([k,i,t])=>`<button class="${tab===k?"on":""}" onclick="tab='${k}';render()"><span>${i}</span>${t}</button>`).join("");
+$("v").innerHTML=V[tab]()+(tab==="redes"?'<button class="fab" onclick="compose()">✏️</button>':"")}
+const V={};
+V.home=()=>{let a=pa(),d6=s.day>=6;return`<div class="card"><div class="hero"><div style="flex:1"><h2>${esc(nm(s))} <span style="opacity:.6;font-size:14px">#${s.cu.n9||9}</span></h2><div class="sub">${s.pos} · ${s.age} años · ${s.nat}</div><span class="pill">OVR ${ovr()}</span><span class="pill">Sueldo $${fm(s.sal)}/sem</span>${s.boot?`<span class="pill">👟 ${esc(s.boot)}</span>`:""}</div></div>${bar("⚡",s.en,"#a6f750")}${bar("😊",s.mo,"#f5d66d")}${bar("🔥",s.fa,"#ff5d73")}</div>
+<div class="card"><div class="row"><b>📅 ${DY[s.day]} · Sem ${s.wk}</b><span class="sub">vs ${esc(s.opp)} (${CL[s.opp].o})</span></div><div class="sub" style="margin-top:5px">🎁 Próximo evento especial: en ${s.eventIn||3} días de actividad</div><div style="display:flex;gap:4px;margin:8px 0">${DY.slice(1).map((x,i)=>`<span class="pill" style="flex:1;text-align:center;margin:0;${i+1===s.day?"background:var(--a);color:#06210f":i+1<s.day?"opacity:.4":""}">${x[0]}</span>`).join("")}</div>${d6?`<p><b>⚽ Día de partido</b><br><span class="sub">Hoy juegas contra ${esc(s.opp)}.</span></p>`:`<div class="ch" style="margin:0"><b>${a.n}</b><small>${a.d}<br>${a.l}</small></div><button class="btn" style="width:100%;margin-top:8px" ${s.dd?"disabled":""} onclick="doAct()">${s.dd?"✔ Ya participaste":"🎉 Participar"}</button>`}</div>${d6?`<button class="play" onclick="playWeek()">⚽ JUGAR JORNADA</button>`:`<button class="play" onclick="nextDay()">▶ Siguiente día</button><button class="btn s" style="width:100%;margin:-4px 0 12px" onclick="s.day=6;s.dd=0;save();render()">⏩ Ir al día del partido</button>`}
+<div class="card"><h3>🎯 Enfoque semanal</h3><div class="sub">Elige qué mejorar toda la semana. Más probabilidad si vas a las actividades del club.</div><div class="g3" style="margin-top:8px">${Object.keys(SN).map(k=>`<button class="btn ${s.foc===k?"":"s"}" onclick="setFoc('${k}')">${SN[k]}</button>`).join("")}</div></div>
+<div class="card"><h3>Acción de la semana</h3><div class="g3"><button class="big" onclick="trainM()">🏋️<small>Entrenar</small></button><button class="big" onclick="rest()">😴<small>Descansar</small></button><button class="big" onclick="tab='gente';render()">🎉<small>Salir</small></button></div>${s.did.act?'<div class="sub" style="margin-top:8px">Ya usaste tu acción de la semana</div>':""}<button class="btn s" style="width:100%;margin-top:10px" onclick="endWeek(null);tg('⏭ Semana '+s.wk)">⏭ Saltar semana sin jugar</button></div><div class="card"><h3>📰 Noticias</h3>${s.news.slice(0,5).map(n=>`<div class="post" style="font-size:13px">${esc(n)}</div>`).join("")}</div>`};
+V.liga=()=>{let t=Object.entries(s.tb).sort((a,b)=>b[1].p-a[1].p||(b[1].gf-b[1].gc)-(a[1].gf-a[1].gc));return`<div class="card"><h3>🏆 ${CL[s.club].g} · Temporada ${s.se}</h3><div class="row sub"><span>Club</span><span>PJ · DG · PTS</span></div>${t.map(([n,x],i)=>`<div class="row" ${n===s.club?'style="color:var(--a);font-weight:800"':""}><span>${i+1}. ${esc(n)}</span><span>${x.j} · ${x.gf-x.gc>0?"+":""}${x.gf-x.gc} · <b>${x.p}</b></span></div>`).join("")}</div><div class="g3" style="grid-template-columns:1fr 1fr"><button class="big" onclick="market()">🔁<small>Mercado</small></button><button class="big" onclick="players()">⭐<small>Jugadores (${s.world.length+s.sq.length})</small></button></div>`};
+V.redes=()=>`<div class="card"><h3>📱 Redes</h3><div class="sub">Seguidores: ${fm(500+s.fa*s.fa*30)}</div>${s.feed.map((p,i)=>`<div class="post"><b>${esc(p.who)}</b> <span class="sub">· S${p.w}</span><p>${esc(p.t)}</p><button class="btn s" onclick="like(${i})">${p.on?"❤️":"🤍"} ${p.lk}</button></div>`).join("")||'<p class="sub">Aún no hay publicaciones.</p>'}</div>`;
+V.gente=()=>{let p=s.pa;return`<div class="card"><h3>💞 Pareja</h3>${p?`<div class="row"><div><b>${esc(nm(p))}</b>${s.mar?" 💍":""}<div class="sub">Relación ${Math.round(p.bond)}/100</div></div><div>${p.bond>=85&&!s.mar?'<button class="btn" onclick="act(\'p\',\'mar\')">💍</button>':""}</div></div><div class="g3"><button class="big" style="font-size:20px" onclick="act('p','msg')">💬<small>Mensaje</small></button><button class="big" style="font-size:20px" onclick="act('p','cita')">🍝<small>Cita $80</small></button><button class="big" style="font-size:20px" onclick="act('p','reg')">🎁<small>Regalo $300</small></button></div><div class="g3" style="margin-top:8px"><button class="big" style="font-size:20px" onclick="act('p','via')">✈️<small>Viaje $1.500</small></button><button class="btn r" onclick="act('p','end')">Terminar</button></div>`:`<p class="sub">Sin pareja. Sal a conocer gente.</p><button class="btn" onclick="meet()">🍸 Conocer gente · $50</button>`}</div><div class="card"><h3>🤝 Amigos</h3>${s.fr.map((f,i)=>`<div class="row"><div>${f.job} <b>${esc(nm(f))}</b><div class="sub">Amistad ${Math.round(f.bond)}/100</div></div><div><button class="btn s" onclick="act(${i},'msg')">💬</button> <button class="btn" onclick="act(${i},'out')">🍔 $40</button></div></div>`).join("")}</div><div class="card"><h3>🧢 Compañeros</h3><div class="sub">Capitán: ${esc(nm(s.cap))}</div>${s.sq.map(q=>`<div class="row"><span>${esc(nm(q))}</span><span class="sub">${q.pos} · ${q.o}</span></div>`).join("")}</div>`};
+V.yo=()=>`<div class="card"><h3>📈 Atributos · OVR ${ovr()}</h3>${Object.keys(SN).map(k=>bar(SN[k],s.st[k],"#38bdf8")).join("")}</div><div class="card"><h3>📊 Carrera</h3><div class="row"><span>Partidos</span><b>${s.mp}</b></div><div class="row"><span>V/E/D</span><b>${s.w}/${s.d}/${s.lo}</b></div><div class="row"><span>Goles / Asist.</span><b>${s.gl}/${s.as}</b></div><div class="row"><span>Títulos</span><b>${s.ti}</b></div><div class="row"><span>Selección</span><b>${s.sg}</b></div></div><div class="g3"><button class="big" onclick="setNum()">🔢<small>Número</small></button><button class="big" onclick="shop()">🛍️<small>Tienda</small></button><button class="big" onclick="spons()">🤝<small>Marcas</small></button><button class="big" onclick="stats()">📊<small>Estadísticas</small></button></div><div class="card" style="margin-top:12px"><button class="btn s" onclick="exp()">💾 Exportar</button> <button class="btn s" onclick="$('imp').click()">📂 Importar</button> <button class="btn r" onclick="if(confirm('¿Borrar y empezar nueva carrera?')){s=null;setup()}">Nueva</button><input id="imp" type="file" accept=".json" style="display:none" onchange="imp(this)"></div>`;
+function exp(){let a=document.createElement("a");a.href=URL.createObjectURL(new Blob([JSON.stringify(s)],{type:"application/json"}));a.download="pfs-save.json";a.click()}
+function imp(i){let f=i.files[0];if(!f)return;let r=new FileReader();r.onload=()=>{try{let p=JSON.parse(r.result);if(!p.st||!p.club)throw 0;s=p;save();render();tg("Partida importada")}catch(e){tg("Archivo inválido")}};r.readAsText(f)}
+function like(i){let p=s.feed[i];if(p.on)return;p.on=1;p.lk++;if(p.k==="f")s.fr[0].bond=cl(s.fr[0].bond+1);save();render()}
+function compose(){md("✏️ Publicar",[["💪 Día de trabajo","El esfuerzo de hoy construye el jugador de mañana 💪",2],["🤝 Equipo primero","Primero el equipo. Vamos por más 🤝",1],["🔥 Voy por todo","Estoy listo para demostrar mi nivel 🔥",4],["❤️ Gratitud","Agradecido con quienes siempre están ❤️",1]].map((x,i)=>`<button class="ch" onclick="pub(${i})"><b>${x[0]}</b><small>${x[1]}</small></button>`).join(""))}
+function pub(i){let x=[["Día de trabajo",2],["Equipo",1],["Voy por todo",4],["Gratitud",1]][i],T=["El esfuerzo de hoy construye el jugador de mañana 💪","Primero el equipo. Vamos por más 🤝","Estoy listo para demostrar mi nivel 🔥","Agradecido con quienes siempre están ❤️"];post(nm(s)+" (tú)",T[i],"o");s.fa=cl(s.fa+x[1]);if(i===2&&Math.random()<.3){s.trust=cl(s.trust-5);news("Tu publicación no cayó bien en el vestuario.")}save();cm()}
+function trainM(){if(s.did.act)return tg("Ya usaste tu acción esta semana");md("🏋️ Entrenar (-30 ⚡)",Object.keys(SN).map(k=>`<button class="ch" onclick="train('${k}')"><b>${SN[k]} · ${s.st[k]}</b></button>`).join(""))}
+function train(k){if(s.en<30){tg("Sin energía: descansa");return}s.en-=30;s.did.act=1;if(Math.random()<.92-s.st[k]/140){s.st[k]=cl(s.st[k]+1,0,99);s.trust=cl(s.trust+2);news("Mejoraste "+SN[k]+" (+1)");tg("📈 +1 "+SN[k])}else tg("Sin mejora esta vez");cm();save()}
+function rest(){if(s.did.act)return tg("Ya usaste tu acción esta semana");s.did.act=1;s.en=cl(s.en+45+(s.it.includes("Nutricionista")?8:0));s.mo=cl(s.mo+6);tg("😴 Descansaste");save();render()}
+function act(w,a){let F=w==="p"?s.pa:s.fr[w],k=w+a;if(a==="end"){s.pa=null;s.mo=cl(s.mo-8);news("Terminaste la relación.");save();return render()}if(s.did[k])return tg("Ya lo hiciste esta semana");let c={out:40,cita:80,reg:300,via:1500,mar:5000}[a]||0;if(s.money<c)return tg("No te alcanza el dinero");s.money-=c;s.did[k]=1;let b={msg:3,out:8,cita:9,reg:14,via:25,mar:30}[a];F.bond=cl(F.bond+b);s.mo=cl(s.mo+(a==="msg"?2:7));
+if(a==="mar"){s.mar=1;s.fa=cl(s.fa+8);post(nm(F),"¡Nos casamos! 💍 Gracias por tanto amor, "+s.n,"p");news("¡Te casaste con "+nm(F)+"!");burst("💍 ¡SÍ, ACEPTO!")}else if(w==="p"&&a!=="msg")post(nm(F),R(["Cena increíble con "+s.n+" 🍝❤️","Qué lindo plan con "+s.n+" ✨","Orgullosa de lo que logras, "+s.n+" ❤️"]),"p");else if(a==="out")post(nm(F),R(["Salida con "+s.n+" 🍔 qué crack","Con "+s.n+" de parche 😎"]),"f");tg("❤️ +"+b);save();render()}
+function meet(){if(s.money<50)return tg("No te alcanza");s.money-=50;if(Math.random()<.6){s.pa={...pn(true),bond:rn(40,60)};news("Conociste a "+nm(s.pa)+". ¡Hay química!");post(nm(s.pa),"Conocí a alguien especial ✨","p");burst("💘 "+s.pa.n)}else tg("Esta vez no hubo chispa");save();render()}
+function burst(t,sub){let d=document.createElement("div");d.className="burst";d.innerHTML="<span>"+t+"<br><small style='font-size:22px'>"+(sub||"")+"</small></span>";document.body.appendChild(d);setTimeout(()=>d.remove(),1700)}
+function welcome(){let c=cur(),ini=s.club.split(" ").map(w=>w[0]).join("").slice(0,3),cf=Array.from({length:36},()=>`<span class="cf" style="left:${rn(0,98)}%;animation-delay:${Math.random()*1.5}s">${R(["🎉","⚽","✨","🏆","🎊"])}</span>`).join("");
+let d=document.createElement("div");d.className="full";d.style.background=`radial-gradient(circle,${c.c},#05060d)`;d.innerHTML=cf+`<div><div class="crest" style="background:${c.c}">${esc(ini)}</div><h1 style="margin:0;font-size:30px">¡Bienvenido a ${esc(s.club)}!</h1><p>${CL[s.club].g}</p><p>El capitán <b>${esc(nm(s.cap))}</b> te recibe: "¡Aquí se trabaja y se gana!"</p><button class="btn">Entrar al vestuario</button></div>`;d.onclick=()=>d.remove();document.body.appendChild(d);
+post(s.club+" (oficial)","¡Bienvenido "+nm(s)+"! 🔥 Refuerzo oficial.","c");post(nm(s.cap),"Bienvenido al grupo "+s.n+", a darlo todo 💪","t");post(nm(s.fr[0]),"¡Mi amigo "+s.n+" ficha por "+s.club+"! 🤯 Lo logró.","f");if(s.pa)post(nm(s.pa),"Muy orgullosa de ti, "+s.n+" ❤️ "+s.club+"!","p")}
+function offerOk(n){let c=CL[n];return n!==s.club&&ovr()>=c.o-3&&s.fa>=Math.max(0,c.o-50)}
+function market(){md("🔁 Mercado",Object.keys(CL).filter(n=>n!==s.club&&CL[n].g!=="Amateur").sort((a,b)=>CL[a].o-CL[b].o).map(n=>`<div class="row"><div><b>${esc(n)}</b><div class="sub">${CL[n].g} · Nivel ${CL[n].o} · $${fm(CL[n].sal)}/sem</div></div><button class="btn" ${offerOk(n)?"":"disabled"} onclick="sign('${n}')">Fichar</button></div>`).join("")+'<p class="sub">Requiere OVR cercano al del club y suficiente fama.</p>')}
+function sign(n){s.club=n;s.sal=CL[n].sal;s.ctr=2;s.trust=40;genSq();s.cap=pn();initTb();news("Fichaste por "+n+" 🎉");save();cm();welcome();render()}
+function players(){md("⭐ Jugadores",`<input class="f" id="q" placeholder="Buscar nombre, club o posición" oninput="plist(this.value)"><div id="pl"></div>`);plist("")}
+function plist(q){q=q.toLowerCase();let a=[...s.world,...s.sq.map(p=>({...p,c:s.club}))].filter(p=>(nm(p)+" "+p.c+" "+p.pos).toLowerCase().includes(q)).sort((a,b)=>b.o-a.o).slice(0,40);$("pl").innerHTML=a.map(p=>`<div class="row"><div><b>${p.star?"⭐ ":""}${esc(nm(p))}</b><div class="sub">${esc(p.c)} · ${esc(p.pos)} · ${p.o}</div></div><button class="btn s" onclick="fol('${esc(nm(p))}')">${s.fol.includes(nm(p))?"Siguiendo":"Seguir"}</button></div>`).join("")||'<p class="sub">Sin resultados</p>'}
+function fol(n){if(!s.fol.includes(n)){s.fol.push(n);s.fa=cl(s.fa+1)}plist($("q").value);save()}
+function tgT(i){let a=s.cu.tt;s.cu.tt=a.includes(i)?a.filter(x=>x!==i):[...a,i];/*custom*/()}
+function /*custom*/(){let c=s.cu,sw=(a,k)=>`<div class="editor-swatches">${a.map(x=>`<button aria-label="${x}" class="sw ${c[k]===x?"on":""}" style="background:${x}" onclick="s.cu.${k}='${x}';/*custom*/()"></button>`).join("")}</div>`,ch=(a,k)=>`<div class="editor-choices">${a.map((x,i)=>`<button class="btn ${((c[k]|0)===i)?"":"s"}" onclick="s.cu.${k}=${i};/*custom*/()">${x}</button>`).join("")}</div>`;md("🎨 Editor del futbolista",`<div class="player-editor"><div class="player-preview">${/*av(210,250)}<div class="player-preview-name">${esc(s.n)} ${esc(s.l)}</div><div class="sub">Vista previa 2D · Nº ${c.n9||9}</div></div><div class="editor-section"><h3>Datos del jugador</h3><input class="f" aria-label="Nombre" placeholder="Nombre" value="${esc(s.n)}" maxlength="16" oninput="s.n=this.value"><input class="f" aria-label="Apellido" placeholder="Apellido" value="${esc(s.l)}" maxlength="16" oninput="s.l=this.value"><label class="editor-label">Número de camiseta</label><input class="f" type="number" min="1" max="99" value="${c.n9||9}" oninput="s.cu.n9=cl(+this.value||9,1,99);/*custom*/()"></div><div class="editor-section"><h3>🎨 Color de piel</h3>${sw(SK,"sk")}</div><div class="editor-section"><h3>💇 Peinados</h3>${ch(HN,"hs")}<label class="editor-label">Color de pelo</label>${sw(HC,"hc")}</div><div class="editor-section"><h3>🧔 Barba y rostro</h3>${ch(BN,"bd")}<label class="editor-label">Color de ojos</label>${sw(EY,"ey")}</div><div class="editor-section"><h3>✨ Tatuajes</h3><div class="editor-choices">${TN.map(([i,n])=>`<button class="btn ${c.tt.includes(i)?"":"s"}" onclick="tgT('${i}')">${c.tt.includes(i)?"✓ ":""}${n}</button>`).join("")}</div></div><div class="editor-section"><h3>🧢 Accesorios</h3>${ch(ACC,"ac")}<label class="editor-label">Camiseta</label>${sw(KIT,"kit")}</div><div class="editor-section"><h3>⚽ Celebración de gol</h3>${ch(CEL,"ce")}</div><div class="editor-section"><h3>😊 Expresión</h3><div class="editor-choices">${["Normal","Sonrisa","Serio"].map((x,i)=>`<button class="btn ${((c.mood|0)===i)?"":"s"}" onclick="s.cu.mood=${i};/*custom*/()">${x}</button>`).join("")}</div></div>
+<div class="editor-section"><h3>🌈 Color de interfaz</h3><div class="editor-swatches">${ACN.map((x,i)=>`<button aria-label="Color de interfaz" class="sw ${c.ac2===i?"on":""}" style="background:${x}" onclick="s.cu.ac2=${i};/*custom*/()"></button>`).join("")}</div></div>
+<div style="display:flex;gap:8px;margin-top:8px">
+<button class="btn s" style="flex:1" onclick="s.cu.hs=rn(0,8);s.cu.bd=rn(0,3);s.cu.ac=rn(0,4);s.cu.mood=rn(0,2);s.cu.sk=R(SK);s.cu.hc=R(HC);s.cu.ey=R(EY);s.cu.kit=R(KIT);/*custom*/()">🎲 Aleatorio</button>
+<button class="play" style="flex:2;margin:0" onclick="save();cm()">Guardar personaje</button>
+</div>`)}
+
+function setNum(){md("Número de camiseta",`<input class="f" type="number" min="1" max="99" value="${s.cu.n9||9}" oninput="s.cu.n9=cl(+this.value||9,1,99)"><button class="play" onclick="save();cm()">Guardar</button>`)}
+function stats(){
+  md("📊 Estadísticas avanzadas", `
+    <div class="card">
+      <div class="row"><span>Promedio goles/partido</span><b>${(s.gl/(s.mp||1)).toFixed(2)}</b></div>
+      <div class="row"><span>Promedio asistencias</span><b>${(s.as/(s.mp||1)).toFixed(2)}</b></div>
+      <div class="row"><span>Win rate</span><b>${Math.round(100*s.w/(s.mp||1))}%</b></div>
+      <div class="row"><span>Títulos</span><b>${s.ti}</b></div>
+      <div class="row"><span>Selecciones</span><b>${s.sg}</b></div>
+      <div class="row"><span>Edad</span><b>${s.age}</b></div>
+    </div>
+    <p class="sub">Sigue jugando para mejorar tus números.</p>
+  `);
+}
+function shop(){md("🛍️ Tienda",'<h3>Estilo de vida</h3>'+ITEMS.map(x=>`<div class="row"><div>${x[4]} <b>${x[0]}</b><div class="sub">$${fm(x[1])} · ${x[2]==="en"?"+8 energía al descansar":x[2]==="mo"?"+"+x[3]+" moral":"+"+x[3]+" fama"}</div></div><button class="btn" ${s.it.includes(x[0])||s.money<x[1]?"disabled":""} onclick="buy('${x[0]}')">${s.it.includes(x[0])?"✔":"Comprar"}</button></div>`).join("")+'<h3 style="margin-top:16px">👟 Botas de fútbol</h3><p class="sub">Algunos modelos solo se desbloquean firmando con su marca.</p>'+BOOTS.map(x=>{let owned=(s.boots||[]).includes(x[0]),sponsored=(s.sp||[]).some(a=>a.n===x[2]);return `<div class="row"><div><b>${x[0]}</b><div class="sub">${x[2]} · $${fm(x[1])}${sponsored?" · Contrato activo":""}</div></div><button class="btn" ${owned||s.money<x[1]||(!sponsored&&["Jordan","Supreme"].includes(x[2]))?"disabled":""} onclick="buyBoot('${x[0]}')">${owned?(s.boot===x[0]?"Equipadas":"Compradas"):(!sponsored&&["Jordan","Supreme"].includes(x[2])?"Contrato": "Comprar")}</button></div>`}).join(""))}
+function buyBoot(n){let x=BOOTS.find(b=>b[0]===n);if(!x||s.money<x[1]||( ["Jordan","Supreme"].includes(x[2])&&!(s.sp||[]).some(a=>a.n===x[2])))return;if(!(s.boots||[]).includes(n)){s.money-=x[1];s.boots.push(n)}s.boot=n;news("👟 Equipaste "+n+".");save();shop()}
+function buy(n){let x=ITEMS.find(i=>i[0]===n);if(s.money<x[1]||s.it.includes(n))return;s.money-=x[1];s.it.push(n);if(x[2]==="fa")s.fa=cl(s.fa+x[3]);if(x[2]==="mo")s.mo=cl(s.mo+x[3]);post(nm(s.fr[1]),"¡"+s.n+" se compró "+x[0]+"! "+x[4],"f");save();shop()}
+function spons(){md("🤝 Marcas",`<div class="sub">Contratos de 26 semanas.</div>`+SP.map(x=>{let a=s.sp.find(y=>y.n===x[0]),ok=ovr()>=x[1]&&s.fa>=x[1]-15;return`<div class="row"><div><b>${x[0]}</b><div class="sub">+$${fm(x[2])}/sem · Req. OVR ${x[1]}</div></div>${a?'<span class="pill">Activo</span>':`<button class="btn" ${ok?"":"disabled"} onclick="signSp('${x[0]}')">Firmar</button>`}</div>`}).join(""))}
+function signSp(n){let x=SP.find(i=>i[0]===n);if(!x||s.sp.some(a=>a.n===n))return;s.sp.push({n,w:x[2],end:(s.se-1)*20+s.wk+26});s.money+=x[2]*4;let branded=BOOTS.find(b=>b[2]===n);if(branded&&!(s.boots||[]).includes(branded[0])){s.boots.push(branded[0]);s.boot=branded[0];news("👟 "+n+" te regaló las "+branded[0]+".")}post(n+" (oficial)","Nuevo embajador: "+nm(s)+" 🤝","c");news("Firmaste con "+n);save();spons()}
+/* ===== Partido ===== */
+const AT={DC:[["Definir ante el portero","sho","goal"],["Cabezazo al área","phy","goal"],["Pase al hueco","pas","assist"],["Carrera al espacio","pac","goal"]],_:[["Disparo de media distancia","sho","goal"],["Pase filtrado","pas","assist"],["Regate al defensor","dri","goal"],["Centro al área","pas","assist"]]},DF=[["Barrer limpio","def","stop"],["Despejar de cabeza","phy","stop"],["Cortar el pase","def","stop"],["Cerrar el espacio","pac","stop"]];
+const GK=[["Atajar el disparo","def","stop"],["Salir a cortar el centro","phy","stop"],["Achicar el ángulo","pac","stop"],["Reaccionar al mano a mano","dri","stop"],["Blocaje seguro","phy","stop"]];
+let m=null;
+function playWeek(){if(s.en<15)tg("⚡ Poca energía: rendirás menos");if(s.trust<8){s.mo=cl(s.mo-4);news("El técnico no te convocó.");return endWeek(null)}
+let pool=s.pos==="POR"?GK:isDef()?[...DF,...AT._]:s.pos==="DC"?[...AT.DC,...AT._]:AT._,n=s.trust<22?2:4,ev=[];for(let i=0;i<n;i++){let a=s.pos==="POR"?GK:isDef()&&i<3?DF:pool,o=[...a].sort(()=>Math.random()-.5).slice(0,2);ev.push(o)}
+m={i:0,g:0,c:0,ev,n:ev.length,opp:s.opp,oo:CL[s.opp].o,r:6};play("")}
+function play(r){let e=m.ev[m.i];md(`⚽ ${esc(s.club)} vs ${esc(m.opp)} · ${m.i+1}/${m.n}`,`${r?`<div class="card" style="border-color:var(--g)"><b>${esc(r)}</b></div>`:""}<div class="score">${m.g} - ${m.c}</div><p class="sub" style="text-align:center">Min ${15+Math.round(m.i*75/m.n)} · ${R(["Balón dividido","Se abre el espacio","Presión alta","Jugada clave"])}</p>${e.map((o,j)=>`<button class="ch" onclick="res(${j})"><b>${o[0]}</b><small>Depende de ${SN[o[1]]}</small></button>`).join("")}`)}
+function res(j){let o=m.ev[m.i][j],t=cur().o,ch=cl(20+s.st[o[1]]*.55+ovr()*.15+s.mo*.05+(t-m.oo)/4-(s.en<30?12:0)+(s.trust>60?4:0),12,92),d;
+if(Math.random()*100<ch){m.r+=.5;s.trust=cl(s.trust+2);if(o[2]==="goal"){m.g++;s.gl++;s.fa=cl(s.fa+3);d="⚽ ¡GOOOL!";burst("⚽ ¡GOOOL!",CEL[s.cu.ce])}else if(o[2]==="assist"){m.g++;s.as++;s.fa=cl(s.fa+2);d="🎯 ¡Asistencia y gol!";burst("🎯 ¡ASISTENCIA!")}else{s.fa=cl(s.fa+1);d="🧱 ¡Gran intervención!"}}else{m.r-=.5;s.trust=cl(s.trust-1);if(Math.random()<(o[2]==="stop"?.55:.25)){m.c++;d="❌ Fallaste y el rival marcó."}else d="⚠️ No salió la acción."}
+s.en=cl(s.en-6);m.i++;if(m.i<m.n)return play(d);let g=t-m.oo;if(Math.random()<cl(.3+g/80,.05,.8))m.g++;if(Math.random()<cl(.3-g/80,.05,.8))m.c++;fin(d)}
+function fin(d){let w=m.g>m.c,e=m.g===m.c,x=m.g+"-"+m.c;s.mp++;if(w){s.w++;s.money+=150;s.fa=cl(s.fa+3);s.trust=cl(s.trust+3)}else if(e)s.d++;else s.lo++;s.mo=cl(s.mo+(w?8:e?2:-5));if(!m.c&&isDef()){s.fa=cl(s.fa+3);d+=" Portería a cero."}
+let T=s.tb[s.club],O=s.tb[m.opp];T.j++;O.j++;T.gf+=m.g;T.gc+=m.c;O.gf+=m.c;O.gc+=m.g;T.p+=w?3:e?1:0;O.p+=w?0:e?1:3;news(`${s.club} ${x} ${m.opp}. ${w?"Victoria":e?"Empate":"Derrota"}.`);post("Prensa deportiva",`${s.club} ${x} ${m.opp}. ${nm(s)} ${m.g>m.c?"fue clave":"no pudo evitarlo"}.`,"m");
+let rs=m;m=null;endWeek(rs);if(s.age<38)md("Final",`<div class="score">${x}</div><p style="text-align:center">${w?"🎉 ¡Victoria!":e?"🤝 Empate":"😞 Derrota"}</p><p class="sub" style="text-align:center">${esc(d)}</p><p style="text-align:center">➡️ <b>Semana ${s.wk}</b> · Próximo rival: ${esc(s.opp)}</p><button class="play" onclick="cm()">Continuar</button>`)}
+function sim(a,b){let g=cl(1.3+(CL[a].o-CL[b].o)/25,.3,3),h=cl(1.3-(CL[a].o-CL[b].o)/25,.3,3),p=x=>{let k=0,L=Math.exp(-x),q=1,u=Math.random();for(let i=0;i<7;i++){q*=i?x/i:1;if(u>(k+=L*q))continue;return i}return 6};return[p(g),p(h)]}
+function endWeek(rs){let lg=cur().g,o=LG[lg].filter(c=>c!==s.club&&c!==s.opp).sort(()=>Math.random()-.5);for(let i=0;i+1<o.length;i+=2){let[a,b]=sim(o[i],o[i+1]),A=s.tb[o[i]],B=s.tb[o[i+1]];A.j++;B.j++;A.gf+=a;A.gc+=b;B.gf+=b;B.gc+=a;if(a>b)A.p+=3;else if(a<b)B.p+=3;else{A.p++;B.p++}}
+if(!rs){s.tb[s.club].j++}
+s.money+=s.sal+s.sp.reduce((n,c)=>n+c.w,0);s.money=Math.max(0,s.money-Math.round(s.sal*.4)-s.it.length*60);s.en=cl(s.en+20);s.did={};s.fr.forEach(f=>f.bond=cl(f.bond-1.5));if(s.pa){s.pa.bond=cl(s.pa.bond-2.5);if(s.pa.bond<8){news(nm(s.pa)+" terminó la relación.");post(nm(s.pa),"Hay ciclos que se cierran. Mucho éxito.","p");s.pa=null;s.mar=0;s.mo=cl(s.mo-10)}}
+let a=(s.se-1)*20+s.wk;s.sp=s.sp.filter(c=>{if(a>=c.end){s.money+=c.w*8;news("Contrato con "+c.n+" terminado. Pago final.");return false}return true});
+let f=R(s.fr);if(Math.random()<.7)post(nm(f),R(["Domingo de asado con la familia 🍖","Nuevo gym, nuevo yo 💪","Estudiando… 😩","Viaje de fin de semana ✈️","Vi el partido de mi parcero "+s.n+" ⚽","Gran concierto anoche 🎶"]),"f");if(s.pa&&Math.random()<.5)post(nm(s.pa),R(["Un día con "+s.n+" vale por mil ❤️","Mirando el partido de "+s.n+" 📺","Orgullosa de ti, "+s.n+" 💫"]),"p");if(Math.random()<.4)post(nm(R(s.sq)),R(["Gran trabajo hoy, equipo 💙","A seguir sumando 🔥","Entrenamiento duro 🏋️"]),"t");
+if(s.foc){let k=s.foc;if(Math.random()<cl(.6-s.st[k]/200+(s.part?.12:0),.1,.8)){s.st[k]=cl(s.st[k]+1,0,99);news("🎯 Tu enfoque semanal mejoró "+SN[k])}s.en=cl(s.en-4)}s.en=cl(s.en+10);s.part=0;s.day=1;s.dd=0;s.dact=rn(0,1);checkAch();s.wk++;if(s.wk>20)endSeason();else{newOpp()}save();render()}
+function endSeason(){let t=Object.entries(s.tb).sort((a,b)=>b[1].p-a[1].p),pos=t.findIndex(x=>x[0]===s.club)+1;if(pos===1&&t.length>1){s.ti++;s.money+=5000;s.fa=cl(s.fa+10);news("🏆 ¡Campeón de "+cur().g+"!");post(s.club+" (oficial)","🏆 ¡CAMPEONES! Gracias afición.","c");setTimeout(()=>burst("🏆 ¡CAMPEÓN!"),300)}else news("Terminaste "+pos+"º en "+cur().g);
+if(s.gl>=15*s.se){s.money+=2000}s.se++;s.wk=1;s.age++;if(s.age>=31){s.st.pac=cl(s.st.pac-2);s.st.phy=cl(s.st.phy-1)}else if(s.age<=24)s.st.pac=cl(s.st.pac+1);s.ctr--;
+if(s.ctr<=0&&s.club!=="Club de Barrio"){if(s.trust<25){news(s.club+" no te renovó.");s.club="Club de Barrio";s.sal=CL[s.club].sal;genSq()}else{s.sal=Math.round(s.sal*1.1);news("Renovaste con "+s.club)}s.ctr=2}
+if(ovr()>=72&&s.fa>=55){s.sg++;news("🌍 ¡Convocado a la selección!");post("Federación","Convocatoria: "+nm(s),"c")}
+s.world.forEach(p=>{p.o=cl(p.o+rn(-1,1),50,94)});initTb();if(s.age>=38)return md("🏁 Retiro",`<p>Te retiras a los ${s.age} años.</p><div class="row"><span>Partidos</span><b>${s.mp}</b></div><div class="row"><span>Goles</span><b>${s.gl}</b></div><div class="row"><span>Títulos</span><b>${s.ti}</b></div><button class="play" onclick="s=null;cm();setup()">Nueva carrera</button>`)}
+window.onerror=m=>tg("⚠️ "+m);(function(){try{let p=JSON.parse(localStorage.getItem("pfs14"));if(p&&(p.v===14||p.v===15||p.v===16||p.v===17)){s=p;s.v=17;s.cu=Object.assign({n9:9},s.cu||{});s.cu.ac%=ACC.length;s.day=s.day||1;s.dd=s.dd||0;s.dact=s.dact||0;s.boots=Array.isArray(s.boots)?s.boots:[];s.boot=s.boot||null;s.eventIn=Number.isFinite(s.eventIn)?s.eventIn:rn(3,5);s.eventCount=s.eventCount||0;render()}else setup()}catch(e){setup()}})();
+</script></body></html>
